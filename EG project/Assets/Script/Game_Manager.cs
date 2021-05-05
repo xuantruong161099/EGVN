@@ -23,7 +23,7 @@ public class Game_Manager : MonoBehaviour
     {
         for (int i = 0; i < slotGun.Length; i++)
         {
-            if (slotGun[i].inUsed == false)
+            if (!slotGun[i].inUsed)
             {
                 slotGun[i].inUsed = true;
                 playerIn = slotGun[i];
