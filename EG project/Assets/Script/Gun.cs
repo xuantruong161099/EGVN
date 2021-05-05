@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     public float bulletSpeed;
     public Transform firePoint;
     Rigidbody2D rb2d;
-
+    public float rotateSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +40,10 @@ public class Gun : MonoBehaviour
                     GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
                     bullet.GetComponent<Rigidbody2D>().velocity = firedir * bulletSpeed;
                 }
+            }
+            else if (Input.GetTouch(0).phase == TouchPhase.Stationary)
+            {
+                //
             }
         }    
     }
